@@ -4,6 +4,7 @@ import ErrorPage from 'next/error'
 import Layout from '~/components/layout'
 import PostContent from '~/components/atoms/postContent'
 import PostHeader from '~/components/molecules/postHeader'
+import PostComment from '~/components/molecules/postComment'
 import { getPostBySlug, getAllPosts } from '~/lib/api'
 import markdownToHtml from '~/lib/markdownToHtml'
 import cst from '~/lib/constants'
@@ -30,8 +31,9 @@ const PostPage = ({ post }: Props) => {
               { post.title } | { cst.SITE_NAME }
             </title>
           </Head>
-          <PostHeader post={post} />
-          <PostContent post={post} />
+          <PostHeader post={ post } />
+          <PostContent post={ post } />
+          <PostComment post={ post } />
         </>
       )}
     </Layout>
