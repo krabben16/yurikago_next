@@ -12,7 +12,7 @@ import Post from '~/types/post'
 import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import { createArticleSchemaObject } from '~/lib/schema/article'
 import 'prism-themes/themes/prism-vsc-dark-plus.css'
-import Breadcrumb from "~/types/breadcrumb"
+import Breadcrumb from '~/types/breadcrumb'
 
 type Props = {
   post: Post
@@ -37,24 +37,30 @@ const PostPage = ({ post }: Props) => {
         <>
           <Head>
             <title>
-              { post.title } | { cst.SITE_NAME }
+              {post.title} | {cst.SITE_NAME}
             </title>
-            <meta name="description" content={ post.excerpt } />
-            <meta property="og:title" content={ `${post.title} | ${cst.SITE_NAME}` } />
-            <meta property="og:description" content={ post.excerpt } />
+            <meta name="description" content={post.excerpt} />
+            <meta
+              property="og:title"
+              content={`${post.title} | ${cst.SITE_NAME}`}
+            />
+            <meta property="og:description" content={post.excerpt} />
             <meta property="og:type" content="article" />
-            <meta property="og:url" content={ `${cst.FRONT_URL}/posts/${post.slug}` } />
+            <meta
+              property="og:url"
+              content={`${cst.FRONT_URL}/posts/${post.slug}`}
+            />
             {/* 構造化マークアップ */}
             <script type="application/ld+json">
-              { JSON.stringify(createBreadcrumbSchemaObject(breadcrumbs)) }
+              {JSON.stringify(createBreadcrumbSchemaObject(breadcrumbs))}
             </script>
             <script type="application/ld+json">
-              { JSON.stringify(createArticleSchemaObject(post)) }
+              {JSON.stringify(createArticleSchemaObject(post))}
             </script>
           </Head>
-          <PostHeader post={ post } />
-          <PostContent post={ post } />
-          <PostComment post={ post } />
+          <PostHeader post={post} />
+          <PostContent post={post} />
+          <PostComment post={post} />
         </>
       )}
     </Layout>

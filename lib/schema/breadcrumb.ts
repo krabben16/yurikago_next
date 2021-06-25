@@ -1,5 +1,5 @@
 import cst from '~/lib/constants'
-import Breadcrumb from "~/types/breadcrumb"
+import Breadcrumb from '~/types/breadcrumb'
 
 /**
  * パンくずの構造化データを作成する

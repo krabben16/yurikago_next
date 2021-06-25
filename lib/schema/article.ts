@@ -8,10 +8,10 @@ import Post from '~/types/post'
  */
 export const createArticleSchemaObject = (post: Post) => {
   return {
-    '@context': "http://schema.org",
-    '@type': "Article",
+    '@context': 'http://schema.org',
+    '@type': 'Article',
     'mainEntityOfPage': {
-      '@type': "WebPage",
+      '@type': 'WebPage',
       '@id': `${cst.FRONT_URL}/posts/${post.slug}`,
     },
     'headline': post.title,
@@ -19,14 +19,14 @@ export const createArticleSchemaObject = (post: Post) => {
     'datePublished': post.date,
     'dateModified': post.date,
     'author': {
-      '@type': "Person",
+      '@type': 'Person',
       'name': cst.ARTICLE_AUTHOR,
     },
     'publisher': {
-      '@type': "Organization",
+      '@type': 'Organization',
       'name': cst.ARTICLE_ORGANIZATION,
       'logo': {
-        '@type': "ImageObject",
+        '@type': 'ImageObject',
         'url': `${cst.FRONT_URL}/images/schema/logo.jpg`,
       },
     },

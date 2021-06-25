@@ -11,11 +11,11 @@ const PostComment = ({ post }: Props) => {
     url: `/posts/${post.slug}`,
     identifier: post.slug,
     title: post.title,
-    language: 'ja'	
+    language: 'ja',
   }
   return (
     <div className="mt-8">
-      <DiscussionEmbed shortname={ cst.DISQUS_SHORTNAME } config={ disqusConfig }/>
+      <DiscussionEmbed shortname={cst.DISQUS_SHORTNAME} config={disqusConfig} />
     </div>
   )
 }

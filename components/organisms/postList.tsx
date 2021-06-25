@@ -9,7 +9,7 @@ const PostList = ({ posts }: Props) => {
   return (
     <div className="grid grid-cols-1 gap-10">
       {posts.map((post) => (
-        <PostListItem key={ post.slug } post={ post }/>
+        <PostListItem key={post.slug} post={post} />
       ))}
     </div>
   )

@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
       <Meta />
       <div className="container max-w-screen-md px-4 prose">
         <Nav />
-        <main>{ children }</main>
+        <main>{children}</main>
         <Footer />
       </div>
     </>
