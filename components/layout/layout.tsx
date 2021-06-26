@@ -1,6 +1,7 @@
 import Meta from '~/components/layout/meta'
 import Nav from '~/components/layout/nav'
 import Footer from '~/components/layout/footer'
+import Main from '~/components/layout/main'
 
 type Props = {
   children: React.ReactNode
@@ -12,7 +13,9 @@ const Layout = ({ children }: Props) => {
       <Meta />
       <div>
         <Nav />
-        <main>{children}</main>
+        <Main>
+          {children}
+        </Main>
         <Footer />
       </div>
     </>
