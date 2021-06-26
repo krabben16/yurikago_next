@@ -24,6 +24,7 @@
         "type": 301
       }
     ],
+    "cleanUrls": true,
     "trailingSlash": false
   }
 }
