@@ -5,11 +5,7 @@ type Props = {
 }
 
 const Content = ({ post }: Props) => {
-  return (
-    <div
-      dangerouslySetInnerHTML={{ __html: post.content }}
-    ></div>
-  )
+  return <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
 }
 
 export default Content
