@@ -18,7 +18,11 @@ const Header = ({ post }: Props) => {
       {/* 作成日 */}
       <div>
         <span>Created:</span>
-        <span className="ms-1"><time dateTime={formattedDate.attribute}>{formattedDate.innerText}</time></span>
+        <span className="ms-1">
+          <time dateTime={formattedDate.attribute}>
+            {formattedDate.innerText}
+          </time>
+        </span>
       </div>
 
       {/* カテゴリ */}
@@ -30,9 +34,7 @@ const Header = ({ post }: Props) => {
       {/* タグ */}
       <div>
         <span>Tags:</span>
-        <span className="ms-1">
-          {post.tags.join(", ")}
-        </span>
+        <span className="ms-1">{post.tags.join(', ')}</span>
       </div>
     </div>
   )

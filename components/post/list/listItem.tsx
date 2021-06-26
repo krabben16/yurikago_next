@@ -20,7 +20,11 @@ const ListItem = ({ post }: Props) => {
 
           <div className="text-muted">
             {/* 作成日 */}
-            <span><time dateTime={formattedDate.attribute}>{formattedDate.innerText}</time></span>
+            <span>
+              <time dateTime={formattedDate.attribute}>
+                {formattedDate.innerText}
+              </time>
+            </span>
             {/* カテゴリ */}
             <span className="ms-1">{post.category}</span>
           </div>
