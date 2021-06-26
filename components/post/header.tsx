@@ -5,7 +5,7 @@ type Props = {
   post: Post
 }
 
-const PostHeader = ({ post }: Props) => {
+const Header = ({ post }: Props) => {
   return (
     <div>
       {/* タイトル */}
@@ -38,4 +38,4 @@ const PostHeader = ({ post }: Props) => {
   )
 }
 
-export default PostHeader
+export default Header

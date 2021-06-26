@@ -6,9 +6,7 @@ type Props = {
   post: Post
 }
 
-// text-gray-700 => rgba(74, 85, 104, var(--text-opacity)) => #4a5568
-
-const PostListItem = ({ post }: Props) => {
+const ListItem = ({ post }: Props) => {
   return (
     <div>
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
@@ -33,4 +31,4 @@ const PostListItem = ({ post }: Props) => {
   )
 }
 
-export default PostListItem
+export default ListItem

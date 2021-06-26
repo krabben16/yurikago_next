@@ -6,7 +6,7 @@ type Props = {
   post: Post
 }
 
-const PostComment = ({ post }: Props) => {
+const Comment = ({ post }: Props) => {
   const disqusConfig = {
     url: `/posts/${post.slug}`,
     identifier: post.slug,
@@ -20,4 +20,4 @@ const PostComment = ({ post }: Props) => {
   )
 }
 
-export default PostComment
+export default Comment

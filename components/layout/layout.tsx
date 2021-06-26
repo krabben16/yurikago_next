@@ -1,6 +1,6 @@
-import Meta from '~/components/meta'
-import Nav from '~/components/molecules/nav'
-import Footer from '~/components/molecules/footer'
+import Meta from '~/components/layout/meta'
+import Nav from '~/components/layout/nav'
+import Footer from '~/components/layout/footer'
 
 type Props = {
   children: React.ReactNode

@@ -1,11 +1,11 @@
 import Post from '~/types/post'
-import PostListItem from '~/components/molecules/postListItem'
+import PostListItem from '~/components/post/list/listItem'
 
 type Props = {
   posts: Post[]
 }
 
-const PostList = ({ posts }: Props) => {
+const List = ({ posts }: Props) => {
   return (
     <div>
       {posts.map((post) => (
@@ -15,4 +15,4 @@ const PostList = ({ posts }: Props) => {
   )
 }
 
-export default PostList
+export default List

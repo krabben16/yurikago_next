@@ -4,7 +4,7 @@ type Props = {
   post: Post
 }
 
-const PostContent = ({ post }: Props) => {
+const Content = ({ post }: Props) => {
   return (
     <div
       dangerouslySetInnerHTML={{ __html: post.content }}
@@ -12,4 +12,4 @@ const PostContent = ({ post }: Props) => {
   )
 }
 
-export default PostContent
+export default Content
