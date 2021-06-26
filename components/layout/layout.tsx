@@ -11,7 +11,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Meta />
-      <div>
+      <div className="container" style={{ maxWidth: 800 }}>
         <Nav />
         <Main>
           {children}

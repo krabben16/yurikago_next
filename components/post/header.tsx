@@ -6,33 +6,33 @@ type Props = {
 }
 
 const Header = ({ post }: Props) => {
+  const formattedDate = {
+    attribute: dayjs(post.date).format('YYYY-MM-DD'),
+    innerText: dayjs(post.date).format('YYYY/MM/DD'),
+  }
   return (
-    <div>
+    <div className="py-4">
       {/* タイトル */}
       <h1>{post.title}</h1>
 
       {/* 作成日 */}
       <div>
         <span>Created:</span>
-        <time dateTime={dayjs(post.date).format('YYYY-MM-DD')}>
-          {dayjs(post.date).format('YYYY/MM/DD')}
-        </time>
+        <span className="ms-2"><time dateTime={formattedDate.attribute}>{formattedDate.innerText}</time></span>
       </div>
 
       {/* カテゴリ */}
       <div>
         <span>Category:</span>
-        <span>{post.category}</span>
+        <span className="ms-2">{post.category}</span>
       </div>
 
       {/* タグ */}
       <div>
         <span>Tags:</span>
-        {post.tags.map((tagName, k) => (
-          <span key={k} className={k > 0 ? 'ml-2' : ''}>
-            {tagName}
-          </span>
-        ))}
+        <span className="ms-2">
+          {post.tags.join(", ")}
+        </span>
       </div>
     </div>
   )

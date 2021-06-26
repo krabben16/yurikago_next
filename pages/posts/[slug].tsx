@@ -11,7 +11,6 @@ import cst from '~/lib/constants'
 import Post from '~/types/post'
 import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import { createArticleSchemaObject } from '~/lib/schema/article'
-import 'prism-themes/themes/prism-vsc-dark-plus.css'
 import Breadcrumb from '~/types/breadcrumb'
 
 type Props = {

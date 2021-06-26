@@ -11,6 +11,7 @@
     "lint:fix": "yarn lint --write"
   },
   "dependencies": {
+    "bootstrap": "^5.0.2",
     "classnames": "2.3.1",
     "dayjs": "^1.10.5",
     "disqus-react": "^1.1.0",

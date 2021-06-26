@@ -7,24 +7,26 @@ type Props = {
 }
 
 const ListItem = ({ post }: Props) => {
+  const formattedDate = {
+    attribute: dayjs(post.date).format('YYYY-MM-DD'),
+    innerText: dayjs(post.date).format('YYYY/MM/DD'),
+  }
   return (
-    <div>
+    <div className="py-4">
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-        <a>
+        <a className="text-decoration-none text-reset">
           {/* 記事タイトル */}
-          <div>{post.title}</div>
+          <div className="fw-bold fs-5">{post.title}</div>
 
-          <div>
+          <div className="text-muted">
             {/* 作成日 */}
-            <time dateTime={dayjs(post.date).format('YYYY-MM-DD')}>
-              {dayjs(post.date).format('YYYY/MM/DD')}
-            </time>
+            <span><time dateTime={formattedDate.attribute}>{formattedDate.innerText}</time></span>
             {/* カテゴリ */}
-            <span>{post.category}</span>
+            <span className="ms-2">{post.category}</span>
           </div>
 
           {/* 概要 */}
-          <div>{post.excerpt}</div>
+          <div className="text-muted">{post.excerpt}</div>
         </a>
       </Link>
     </div>
