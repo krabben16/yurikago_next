@@ -1,7 +1,7 @@
 export default {
   FRONT_URL: 'https://www.yurikago-blog.com',
   GITHUB_ID: 'krabben16',
-  GITHUB_URL: 'https://github.com/krabben16/yurikago',
+  GITHUB_URL: 'https://github.com/krabben16/yurikago_next',
   ARTICLE_AUTHOR: 'Hiroki Kawaguchi',
   ARTICLE_ORGANIZATION: 'Yurikago Blog',
   SITE_OWNER: 'Hiroki Kawaguchi',

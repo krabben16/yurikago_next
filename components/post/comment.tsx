@@ -8,7 +8,7 @@ type Props = {
 
 const Comment = ({ post }: Props) => {
   const disqusConfig = {
-    url: `/posts/${post.slug}`,
+    url: `${cst.FRONT_URL}/posts/${post.slug}`,
     identifier: post.slug,
     title: post.title,
     language: 'ja',
