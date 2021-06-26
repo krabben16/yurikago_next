@@ -14,7 +14,7 @@ const Comment = ({ post }: Props) => {
     language: 'ja',
   }
   return (
-    <div className="py-4">
+    <div className="py-3">
       <DiscussionEmbed shortname={cst.DISQUS_SHORTNAME} config={disqusConfig} />
     </div>
   )

@@ -12,7 +12,7 @@ const ListItem = ({ post }: Props) => {
     innerText: dayjs(post.date).format('YYYY/MM/DD'),
   }
   return (
-    <div className="py-4">
+    <div className="py-3">
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
         <a className="text-decoration-none text-reset">
           {/* 記事タイトル */}
@@ -22,7 +22,7 @@ const ListItem = ({ post }: Props) => {
             {/* 作成日 */}
             <span><time dateTime={formattedDate.attribute}>{formattedDate.innerText}</time></span>
             {/* カテゴリ */}
-            <span className="ms-2">{post.category}</span>
+            <span className="ms-1">{post.category}</span>
           </div>
 
           {/* 概要 */}
