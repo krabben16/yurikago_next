@@ -1,3 +1,4 @@
+// https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript
 import remark from 'remark'
 import externalLinks from 'remark-external-links'
 import prism from 'remark-prism'
