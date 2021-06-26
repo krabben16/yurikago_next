@@ -70,13 +70,11 @@ const PostPage = ({ post }: Props) => {
 export default PostPage
 
 type Params = {
-  params: {
-    slug: string
-  }
+  slug: string
 }
 
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+export async function getStaticProps({ slug }: Params) {
+  const post = getPostBySlug(slug, [
     'slug',
     'title',
     'date',
