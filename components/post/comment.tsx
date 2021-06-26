@@ -6,7 +6,7 @@ type Props = {
   post: Post
 }
 
-const PostComment = ({ post }: Props) => {
+const Comment = ({ post }: Props) => {
   const disqusConfig = {
     url: `/posts/${post.slug}`,
     identifier: post.slug,
@@ -14,10 +14,10 @@ const PostComment = ({ post }: Props) => {
     language: 'ja',
   }
   return (
-    <div className="mt-8">
+    <div className="py-3">
       <DiscussionEmbed shortname={cst.DISQUS_SHORTNAME} config={disqusConfig} />
     </div>
   )
 }
 
-export default PostComment
+export default Comment

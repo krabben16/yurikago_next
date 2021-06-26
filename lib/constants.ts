@@ -7,4 +7,5 @@ export default {
   SITE_OWNER: 'Hiroki Kawaguchi',
   SITE_NAME: 'Yurikago Blog',
   DISQUS_SHORTNAME: 'yurikago-blog',
+  GA_TRACKING_ID: 'UA-155216702-1',
 }

@@ -1,3 +1,4 @@
+# create-nuxt-app / Continuous integration で GitHub Actions を選択した時に作成されるファイルを参考にした。
 name: deploy
 
 on:
