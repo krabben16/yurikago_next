@@ -13,9 +13,7 @@ const Layout = ({ children }: Props) => {
       <Meta />
       <div className="container" style={{ maxWidth: 800 }}>
         <Nav />
-        <Main>
-          {children}
-        </Main>
+        <Main>{children}</Main>
         <Footer />
       </div>
     </>
