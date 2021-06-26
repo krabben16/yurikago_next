@@ -10,23 +10,23 @@ type Props = {
 
 const PostListItem = ({ post }: Props) => {
   return (
-    <div className="postListItem">
+    <div>
       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
         <a>
           {/* 記事タイトル */}
-          <div className="text-xl">{post.title}</div>
+          <div>{post.title}</div>
 
-          <div className="flex flex-row text-gray-600 font-normal">
+          <div>
             {/* 作成日 */}
             <time dateTime={dayjs(post.date).format('YYYY-MM-DD')}>
               {dayjs(post.date).format('YYYY/MM/DD')}
             </time>
             {/* カテゴリ */}
-            <span className="ml-2">{post.category}</span>
+            <span>{post.category}</span>
           </div>
 
           {/* 概要 */}
-          <div className="text-gray-600 font-normal">{post.excerpt}</div>
+          <div>{post.excerpt}</div>
         </a>
       </Link>
     </div>
