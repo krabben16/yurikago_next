@@ -12,30 +12,13 @@ const Header = ({ post }: Props) => {
   }
   return (
     <div className="py-3">
+      {/* 作成日 */}
+      <time className="text-muted" dateTime={formattedDate.attribute}>
+        {formattedDate.innerText}
+      </time>
+
       {/* タイトル */}
       <h1>{post.title}</h1>
-
-      {/* 作成日 */}
-      <div>
-        <span>Created:</span>
-        <span className="ms-1">
-          <time dateTime={formattedDate.attribute}>
-            {formattedDate.innerText}
-          </time>
-        </span>
-      </div>
-
-      {/* カテゴリ */}
-      <div>
-        <span>Category:</span>
-        <span className="ms-1">{post.category}</span>
-      </div>
-
-      {/* タグ */}
-      <div>
-        <span>Tags:</span>
-        <span className="ms-1">{post.tags.join(', ')}</span>
-      </div>
     </div>
   )
 }

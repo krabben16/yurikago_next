@@ -3,7 +3,7 @@ import cst from '~/lib/constants'
 
 const Nav = () => {
   return (
-    <div className="py-5 d-flex align-items-center">
+    <div className="py-3 d-flex align-items-center">
       <a href={cst.GITHUB_URL} target="_blank">
         <img
           className="rounded-circle"

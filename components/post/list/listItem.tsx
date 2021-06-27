@@ -18,15 +18,11 @@ const ListItem = ({ post }: Props) => {
           {/* 記事タイトル */}
           <div className="fw-bold fs-5">{post.title}</div>
 
+          {/* 作成日 */}
           <div className="text-muted">
-            {/* 作成日 */}
-            <span>
-              <time dateTime={formattedDate.attribute}>
-                {formattedDate.innerText}
-              </time>
-            </span>
-            {/* カテゴリ */}
-            <span className="ms-1">{post.category}</span>
+            <time dateTime={formattedDate.attribute}>
+              {formattedDate.innerText}
+            </time>
           </div>
 
           {/* 概要 */}
