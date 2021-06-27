@@ -13,7 +13,9 @@ const Header = ({ post }: Props) => {
   return (
     <div className="py-3">
       {/* 作成日 */}
-      <time dateTime={formattedDate.attribute}>{formattedDate.innerText}</time>
+      <time className="text-muted" dateTime={formattedDate.attribute}>
+        {formattedDate.innerText}
+      </time>
 
       {/* タイトル */}
       <h1>{post.title}</h1>
