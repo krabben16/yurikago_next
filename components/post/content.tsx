@@ -1,6 +1,5 @@
 import Post from '~/types/post'
 import 'github-markdown-css'
-import 'prism-themes/themes/prism-vsc-dark-plus.css'
 
 type Props = {
   post: Post
