@@ -21,5 +21,6 @@
 // https://prettier.io/docs/en/index.html
 
 module.exports = {
-  '*.{js,jsx,ts,tsx,json,md}': ['eslint --fix', 'prettier --write'],
+  '*.{js,jsx,ts,tsx}': ['eslint --fix'],
+  '*.{js,jsx,ts,tsx,json,md}': ['prettier --write'],
 }
