@@ -42,7 +42,7 @@ jobs:
         run: yarn
       
       - name: Copy env file
-        run: cp .env.dist .env
+        run: cp .env.dist .env.local
 
       - name: Generate Next
         run: yarn export
