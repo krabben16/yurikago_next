@@ -1,8 +1,6 @@
-import cst from '~/lib/constants'
-
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
-  window.gtag('config', cst.GA_TRACKING_ID, {
+  window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
     page_path: url,
   })
 }

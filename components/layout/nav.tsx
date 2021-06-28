@@ -1,19 +1,22 @@
 import Link from 'next/link'
-import cst from '~/lib/constants'
 
 const Nav = () => {
   return (
     <div className="py-3 d-flex align-items-center">
-      <a href={cst.GITHUB_URL} target="_blank">
+      <a
+        href={process.env.NEXT_PUBLIC_GITHUB_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
         <img
           className="rounded-circle"
           width="60"
-          src={`https://github.com/${cst.GITHUB_ID}.png`}
+          src={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_ID}.png`}
         />
       </a>
       <Link href="/">
         <a className="ms-3 text-decoration-none text-reset fs-3">
-          {cst.SITE_NAME}
+          {process.env.NEXT_PUBLIC_SITE_NAME}
         </a>
       </Link>
     </div>

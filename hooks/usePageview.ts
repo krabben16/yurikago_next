@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { pageview } from '~/lib/ga/gtag'
 
 export default function usePageview() {

@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import cst from '~/lib/constants'
-import { getAllPosts } from '~/lib/api'
-import Post from '~/types/post'
 import Layout from '~/components/layout/layout'
 import PostList from '~/components/post/list/list'
+import { getAllPosts } from '~/lib/api'
 import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import Breadcrumb from '~/types/breadcrumb'
+import Post from '~/types/post'
 
 type Props = {
   allPosts: Post[]
@@ -17,18 +16,24 @@ const IndexPage = ({ allPosts }: Props) => {
   return (
     <Layout>
       <Head>
-        <title>トップページ | {cst.SITE_NAME}</title>
+        <title>トップページ | {process.env.NEXT_PUBLIC_SITE_NAME}</title>
         <meta
           name="description"
-          content={`${cst.SITE_OWNER}の技術ブログです。`}
+          content={`${process.env.NEXT_PUBLIC_SITE_OWNER}の技術ブログです。`}
         />
-        <meta property="og:title" content={`トップページ | ${cst.SITE_NAME}`} />
+        <meta
+          property="og:title"
+          content={`トップページ | ${process.env.NEXT_PUBLIC_SITE_NAME}`}
+        />
         <meta
           property="og:description"
-          content={`${cst.SITE_OWNER}の技術ブログです。`}
+          content={`${process.env.NEXT_PUBLIC_SITE_OWNER}の技術ブログです。`}
         />
         <meta property="og:type" content="blog" />
-        <meta property="og:url" content={`${cst.FRONT_URL}/`} />
+        <meta
+          property="og:url"
+          content={`${process.env.NEXT_PUBLIC_FRONT_URL}/`}
+        />
         {/* 構造化マークアップ */}
         <script type="application/ld+json">
           {JSON.stringify(createBreadcrumbSchemaObject(breadcrumbs))}
