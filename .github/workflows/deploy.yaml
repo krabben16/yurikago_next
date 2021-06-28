@@ -40,6 +40,9 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: yarn
+      
+      - name: Copy env file
+        run: cp .env.dist .env
 
       - name: Generate Next
         run: yarn export
