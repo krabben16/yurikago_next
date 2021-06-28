@@ -35,18 +35,18 @@ const PostPage = ({ post }: Props) => {
         <>
           <Head>
             <title>
-              {post.title} | {process.env.SITE_NAME}
+              {post.title} | {process.env.NEXT_PUBLIC_SITE_NAME}
             </title>
             <meta name="description" content={post.excerpt} />
             <meta
               property="og:title"
-              content={`${post.title} | ${process.env.SITE_NAME}`}
+              content={`${post.title} | ${process.env.NEXT_PUBLIC_SITE_NAME}`}
             />
             <meta property="og:description" content={post.excerpt} />
             <meta property="og:type" content="article" />
             <meta
               property="og:url"
-              content={`${process.env.FRONT_URL}/posts/${post.slug}`}
+              content={`${process.env.NEXT_PUBLIC_FRONT_URL}/posts/${post.slug}`}
             />
             {/* 構造化マークアップ */}
             <script type="application/ld+json">

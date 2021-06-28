@@ -10,7 +10,7 @@ export const createBreadcrumbSchemaObject = (breadcrumbs: Breadcrumb[]) => {
       '@type': 'ListItem',
       'position': k + 1,
       'name': v.name,
-      'item': process.env.FRONT_URL + v.path,
+      'item': process.env.NEXT_PUBLIC_FRONT_URL + v.path,
     }
   })
 

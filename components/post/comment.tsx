@@ -7,7 +7,7 @@ type Props = {
 
 const Comment = ({ post }: Props) => {
   const disqusConfig = {
-    url: `${process.env.FRONT_URL}/posts/${post.slug}`,
+    url: `${process.env.NEXT_PUBLIC_FRONT_URL}/posts/${post.slug}`,
     identifier: post.slug,
     title: post.title,
     language: 'ja',
@@ -15,7 +15,7 @@ const Comment = ({ post }: Props) => {
   return (
     <div className="py-3">
       <DiscussionEmbed
-        shortname={process.env.DISQUS_SHORTNAME}
+        shortname={process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}
         config={disqusConfig}
       />
     </div>
