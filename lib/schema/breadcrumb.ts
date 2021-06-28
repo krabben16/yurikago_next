@@ -1,4 +1,3 @@
-import cst from '~/lib/constants'
 import Breadcrumb from '~/types/breadcrumb'
 
 /**
@@ -11,7 +10,7 @@ export const createBreadcrumbSchemaObject = (breadcrumbs: Breadcrumb[]) => {
       '@type': 'ListItem',
       'position': k + 1,
       'name': v.name,
-      'item': cst.FRONT_URL + v.path,
+      'item': process.env.FRONT_URL + v.path,
     }
   })
 

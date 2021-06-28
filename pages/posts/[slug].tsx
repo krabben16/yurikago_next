@@ -7,7 +7,6 @@ import PostHeader from '~/components/post/header'
 import PostComment from '~/components/post/comment'
 import { getPostBySlug, getAllPosts } from '~/lib/api'
 import markdownToHtml from '~/lib/markdown/markdownToHtml'
-import cst from '~/lib/constants'
 import Post from '~/types/post'
 import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import { createArticleSchemaObject } from '~/lib/schema/article'
@@ -36,18 +35,18 @@ const PostPage = ({ post }: Props) => {
         <>
           <Head>
             <title>
-              {post.title} | {cst.SITE_NAME}
+              {post.title} | {process.env.SITE_NAME}
             </title>
             <meta name="description" content={post.excerpt} />
             <meta
               property="og:title"
-              content={`${post.title} | ${cst.SITE_NAME}`}
+              content={`${post.title} | ${process.env.SITE_NAME}`}
             />
             <meta property="og:description" content={post.excerpt} />
             <meta property="og:type" content="article" />
             <meta
               property="og:url"
-              content={`${cst.FRONT_URL}/posts/${post.slug}`}
+              content={`${process.env.FRONT_URL}/posts/${post.slug}`}
             />
             {/* 構造化マークアップ */}
             <script type="application/ld+json">

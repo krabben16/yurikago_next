@@ -1,4 +1,3 @@
-import cst from '~/lib/constants'
 import Post from '~/types/post'
 
 /**
@@ -12,22 +11,22 @@ export const createArticleSchemaObject = (post: Post) => {
     '@type': 'Article',
     'mainEntityOfPage': {
       '@type': 'WebPage',
-      '@id': `${cst.FRONT_URL}/posts/${post.slug}`,
+      '@id': `${process.env.FRONT_URL}/posts/${post.slug}`,
     },
     'headline': post.title,
-    'image': [`${cst.FRONT_URL}/images/schema/16x9.jpg`],
+    'image': [`${process.env.FRONT_URL}/images/schema/16x9.jpg`],
     'datePublished': post.date,
     'dateModified': post.date,
     'author': {
       '@type': 'Person',
-      'name': cst.ARTICLE_AUTHOR,
+      'name': process.env.ARTICLE_AUTHOR,
     },
     'publisher': {
       '@type': 'Organization',
-      'name': cst.ARTICLE_ORGANIZATION,
+      'name': process.env.ARTICLE_ORGANIZATION,
       'logo': {
         '@type': 'ImageObject',
-        'url': `${cst.FRONT_URL}/images/schema/logo.jpg`,
+        'url': `${process.env.FRONT_URL}/images/schema/logo.jpg`,
       },
     },
   }
