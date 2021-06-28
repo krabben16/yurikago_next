@@ -18,5 +18,5 @@
 // 拡張子がないファイルはリントされない？
 
 module.exports = {
-  '*.{js,jsx,ts,tsx,json,md}': ['prettier --write'],
+  '*.{js,jsx,ts,tsx,json,md}': ['eslint --fix', 'prettier --write'],
 }
