@@ -1,5 +1,5 @@
-import Post from '~/types/post'
 import PostListItem from '~/components/post/list/listItem'
+import Post from '~/types/post'
 
 type Props = {
   posts: Post[]

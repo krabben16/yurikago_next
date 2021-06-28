@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Nav = () => {
   return (
     <div className="py-3 d-flex align-items-center">
-      <a href={process.env.GITHUB_URL} target="_blank">
+      <a href={process.env.GITHUB_URL} target="_blank" rel="noreferrer">
         <img
           className="rounded-circle"
           width="60"

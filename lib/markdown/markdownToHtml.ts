@@ -1,8 +1,8 @@
 // https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript
+import shiki from '@stefanprobst/remark-shiki'
 import remark from 'remark'
 import links from 'remark-external-links'
 import gfm from 'remark-gfm'
-import shiki from '@stefanprobst/remark-shiki'
 import html from 'remark-html'
 
 export default async function markdownToHtml(markdown: string) {

@@ -1,5 +1,5 @@
-import Post from '~/types/post'
 import { DiscussionEmbed } from 'disqus-react'
+import Post from '~/types/post'
 
 type Props = {
   post: Post

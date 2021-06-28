@@ -1,16 +1,16 @@
+import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
 import Layout from '~/components/layout/layout'
+import PostComment from '~/components/post/comment'
 import PostContent from '~/components/post/content'
 import PostHeader from '~/components/post/header'
-import PostComment from '~/components/post/comment'
 import { getPostBySlug, getAllPosts } from '~/lib/api'
 import markdownToHtml from '~/lib/markdown/markdownToHtml'
-import Post from '~/types/post'
-import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import { createArticleSchemaObject } from '~/lib/schema/article'
+import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import Breadcrumb from '~/types/breadcrumb'
+import Post from '~/types/post'
 
 type Props = {
   post: Post

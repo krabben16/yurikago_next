@@ -1,5 +1,5 @@
-import Post from '~/types/post'
 import dayjs from 'dayjs'
+import Post from '~/types/post'
 
 type Props = {
   post: Post

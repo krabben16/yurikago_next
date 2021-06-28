@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { getAllPosts } from '~/lib/api'
-import Post from '~/types/post'
 import Layout from '~/components/layout/layout'
 import PostList from '~/components/post/list/list'
+import { getAllPosts } from '~/lib/api'
 import { createBreadcrumbSchemaObject } from '~/lib/schema/breadcrumb'
 import Breadcrumb from '~/types/breadcrumb'
+import Post from '~/types/post'
 
 type Props = {
   allPosts: Post[]
