@@ -7,15 +7,7 @@ type Params = {
   send_page_view?: boolean
 }
 
-type FieldObject = {
-  event_category: string
-  event_label: string
-  value?: number
-}
-
 interface Window {
   // pageview
   gtag(type: 'config', googleAnalyticsId: string, params: Params)
-  // event
-  gtag(type: 'event', eventAction: string, fieldObject: FieldObject)
 }
