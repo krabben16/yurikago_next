@@ -47,7 +47,7 @@ const IndexPage = ({ allPosts }: Props) => {
 export default IndexPage
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['slug', 'title', 'date', 'category', 'excerpt'])
+  const allPosts = getAllPosts(['slug', 'title', 'date', 'excerpt'])
 
   return {
     props: { allPosts },
