@@ -4,6 +4,7 @@ type PostType = {
   date: string
   excerpt: string
   tags: string[]
+  published: boolean
   content: string
 }
 
