@@ -14,5 +14,6 @@
       "matchUpdateTypes": ["patch"],
       "labels": ["patch"]
     }
-  ]
+  ],
+  "reviewers": "krabben16"
 }
