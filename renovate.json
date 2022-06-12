@@ -3,11 +3,5 @@
     "config:base"
   ],
   "timezone": "Asia/Tokyo",
-  "labels": ["dependencies"],
-  "patch": {
-    "automerge": true
-  },
-  "lockFileMaintenance": {
-    "enabled": true
-  }
+  "labels": ["renovate"]
 }
