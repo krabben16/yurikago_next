@@ -7,6 +7,10 @@
   "labels": ["renovate"],
   "packageRules": [
     {
+      "matchUpdateTypes": ["major"],
+      "labels": ["major"]
+    },
+    {
       "matchUpdateTypes": ["minor"],
       "labels": ["minor"]
     },
