@@ -3,8 +3,8 @@ type PostType = {
   title: string
   date: string
   excerpt: string
-  category: string
   tags: string[]
+  published: boolean
   content: string
 }
 
