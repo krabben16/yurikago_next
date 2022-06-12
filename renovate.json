@@ -5,5 +5,7 @@
   ],
   "timezone": "Asia/Tokyo",
   "labels": ["renovate"],
-  "reviewers": ["@krabben16"]
+  "reviewers": ["@krabben16"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0
 }
