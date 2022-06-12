@@ -4,5 +4,15 @@
     "config:base"
   ],
   "timezone": "Asia/Tokyo",
-  "labels": ["renovate"]
+  "labels": ["renovate"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor"],
+      "labels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "labels": ["patch"]
+    }
+  ]
 }
