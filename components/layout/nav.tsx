@@ -6,7 +6,7 @@ const Nav = () => {
       <img
         className="rounded-circle"
         width="60"
-        src={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_ID}.png`}
+        src="https://gyazo.com/f9796cb6495069a239407bf0e3d5c447"
       />
       <Link href="/">
         <a className="ms-3 text-decoration-none text-reset fs-3">

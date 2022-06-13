@@ -19,7 +19,7 @@ export const createArticleSchemaObject = (post: Post) => {
     'dateModified': post.date,
     'author': {
       '@type': 'Person',
-      'name': process.env.NEXT_PUBLIC_ARTICLE_AUTHOR,
+      'name': 'Jane Doe',
     },
     'publisher': {
       '@type': 'Organization',
