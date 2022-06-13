@@ -8,10 +8,14 @@ yarn dev
 
 # dependency
 
-**todo**
+**dashboard**
+
+https://github.com/krabben16/yurikago-next/issues/23
+
+**PR todo**
 
 https://github.com/krabben16/yurikago-next/pulls?q=is%3Apr+is%3Aopen+-label%3Awontfix+
 
-**wontfix**
+**PR wontfix**
 
 https://github.com/krabben16/yurikago-next/pulls?q=is%3Aopen+is%3Apr+label%3Awontfix
