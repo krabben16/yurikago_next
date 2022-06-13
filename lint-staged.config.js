@@ -22,5 +22,5 @@
 
 module.exports = {
   '*.{js,jsx,ts,tsx}': ['eslint --fix', 'prettier --write'],
-  '*.{json,md}': ['prettier --write'],
+  '*.{json,yml,md}': ['prettier --write'],
 }
