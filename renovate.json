@@ -3,9 +3,21 @@
   "extends": [
     "config:base"
   ],
-  "timezone": "Asia/Tokyo",
   "labels": ["renovate"],
-  "reviewers": ["@krabben16"],
+  "packageRules": [
+    {
+      "groupName": "dependencies (patch)",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch"]
+    },
+    {
+      "groupName": "devDependencies (patch)",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch"]
+    }
+  ],
   "prHourlyLimit": 0,
-  "prConcurrentLimit": 0
+  "prConcurrentLimit": 0,
+  "reviewers": ["@krabben16"],
+  "timezone": "Asia/Tokyo"
 }
