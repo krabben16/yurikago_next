@@ -10,7 +10,7 @@ export default async function markdownToHtml(markdown: string) {
     .use(links)
     .use(gfm)
     .use(shiki, { theme: 'dark-plus' })
-    .use(html)
+    .use(html, { sanitize: false })
     .process(markdown)
   return result.toString()
 }
