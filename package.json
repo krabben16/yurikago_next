@@ -41,7 +41,7 @@
     "lint-staged": "11.0.0",
     "next-sitemap": "1.9.12",
     "postcss": "8.4.14",
-    "prettier": "2.3.2"
+    "prettier": "2.6.2"
   },
   "license": "MIT"
 }
