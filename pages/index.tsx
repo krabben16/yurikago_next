@@ -19,7 +19,7 @@ const IndexPage = ({ allPosts }: Props) => {
         <title>トップページ | {process.env.NEXT_PUBLIC_SITE_NAME}</title>
         <meta
           name="description"
-          content={`${process.env.NEXT_PUBLIC_SITE_OWNER}の技術ブログです。`}
+          content={`技術ブログです。`}
         />
         <meta
           property="og:title"
@@ -27,7 +27,7 @@ const IndexPage = ({ allPosts }: Props) => {
         />
         <meta
           property="og:description"
-          content={`${process.env.NEXT_PUBLIC_SITE_OWNER}の技術ブログです。`}
+          content={`技術ブログです。`}
         />
         <meta property="og:type" content="blog" />
         <meta
