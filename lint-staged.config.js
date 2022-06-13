@@ -17,10 +17,10 @@
 // .husky/ 以下のファイルはなぜエラーにならない？
 
 // prettierは以下の形式をサポートしている。
-// リント対象をディレクトリ単位でフィルタリングするとき、サポート外の形式のファイルはスキップしている？
+// yarn lint:prettierのようにディレクトリ単位でリント対象をフィルタリングするとき、サポート外の形式のファイルはスキップしている？
 // https://prettier.io/docs/en/index.html
 
 module.exports = {
   '*.{js,jsx,ts,tsx}': ['eslint --fix', 'prettier --write'],
-  '*.{json,md}': ['prettier --write'],
+  '*.{json,yml,md}': ['prettier --write'],
 }
