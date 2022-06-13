@@ -1,6 +1,4 @@
-⚠️ メンテナンスが面倒になったのでZennに移行しました。
-
-https://zenn.dev/krabben16
+⚠️ メンテナンスが面倒になったので2022/06から[Zenn](https://zenn.dev/krabben16)に移行しました。
 
 # develop
 
