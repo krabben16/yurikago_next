@@ -6,28 +6,7 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [
-      {
-        "regex": "/articles/tag/(\\d+)",
-        "destination": "/tags/:1",
-        "type": 301
-      },
-      {
-        "regex": "/articles/list/\\d+",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "regex": "/tags/\\d+",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "regex": "/articles/(\\d+)",
-        "destination": "/posts/:1",
-        "type": 301
-      }
-    ],
+    "redirects": [],
     "cleanUrls": true,
     "trailingSlash": false
   }
