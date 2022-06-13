@@ -1,0 +1,63 @@
+# Push時はCIのみ、Merge時はCIおよびCDを実行するGitHub Actionsを作る（単一のWorkflowで）
+# https://dev.classmethod.jp/articles/create-github-actions-that-run-ci-only-when-push-and-ci-and-cd-when-merging-in-a-single-workflow/
+
+on:
+  push:
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+      
+      - name: Copy env file 📝
+        run: cp .env.dist .env.local
+
+      - name: Cache Next.js Dependency 🏷
+        uses: actions/cache@v3
+        id: cache_nextjs_dependency_id
+        env:
+          cache-name: cache-nextjs-dependency
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
+          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
+
+      - name: Install Next.js Dependency 📦
+        if: ${{ steps.cache_nextjs_dependency_id.outputs.cache-hit != 'true' }}
+        run: rm -rf node_modules && yarn install --frozen-lockfile
+
+      - name: Test Next.js 👮🏻‍♂️
+        run: yarn build && yarn sitemap
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref_name == 'main' }}
+    needs: integration
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+      
+      - name: Copy env file 📝
+        run: cp .env.dist .env.local
+
+      - name: Cache Next.js Dependency 🏷
+        uses: actions/cache@v3
+        id: cache_nextjs_dependency_id
+        env:
+          cache-name: cache-nextjs-dependency
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
+
+      - name: Generate Next.js 🧑🏻‍💻
+        run: yarn export
+
+      - name: Deploy to Firebase 🔥
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YURIKAGO_BLOG }}'
+          channelId: live
+          projectId: yurikago-blog
