@@ -6,6 +6,16 @@
   "labels": ["renovate"],
   "packageRules": [
     {
+      "groupName": "dependencies (minor)",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor"]
+    },
+    {
+      "groupName": "devDependencies (minor)",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor"]
+    },
+    {
       "groupName": "dependencies (patch)",
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["patch"]
