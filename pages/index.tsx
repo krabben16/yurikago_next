@@ -17,18 +17,12 @@ const IndexPage = ({ allPosts }: Props) => {
     <Layout>
       <Head>
         <title>トップページ | {process.env.NEXT_PUBLIC_SITE_NAME}</title>
-        <meta
-          name="description"
-          content={`技術ブログです。`}
-        />
+        <meta name="description" content={`技術ブログです。`} />
         <meta
           property="og:title"
           content={`トップページ | ${process.env.NEXT_PUBLIC_SITE_NAME}`}
         />
-        <meta
-          property="og:description"
-          content={`技術ブログです。`}
-        />
+        <meta property="og:description" content={`技術ブログです。`} />
         <meta property="og:type" content="blog" />
         <meta
           property="og:url"
@@ -47,7 +41,13 @@ const IndexPage = ({ allPosts }: Props) => {
 export default IndexPage
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['slug', 'title', 'date', 'excerpt', 'published'])
+  const allPosts = getAllPosts([
+    'slug',
+    'title',
+    'date',
+    'excerpt',
+    'published',
+  ])
 
   return {
     props: { allPosts },
