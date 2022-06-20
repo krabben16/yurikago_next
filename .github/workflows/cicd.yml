@@ -32,7 +32,10 @@ jobs:
         run: rm -rf node_modules && yarn install --frozen-lockfile
 
       - name: Test Next.js 👮🏻‍♂️
-        run: yarn build && yarn sitemap
+        run: |
+          yarn build
+          yarn sitemap
+          
 
   deploy:
     runs-on: ubuntu-latest
