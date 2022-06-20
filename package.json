@@ -5,8 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export && yarn sitemap",
     "sitemap": "next-sitemap --config sitemap.config.js",
+    "export": "yarn build && yarn export && yarn sitemap",
     "lint:eslint": "eslint --ignore-path .gitignore .",
     "lint:prettier": "prettier --ignore-path .gitignore .",
     "prepare": "husky install"
