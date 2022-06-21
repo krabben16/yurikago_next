@@ -25,7 +25,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
 
       - name: Install Next.js Dependency 📦
         if: ${{ steps.cache_nextjs_dependency_id.outputs.cache-hit != 'true' }}
