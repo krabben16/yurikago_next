@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import * as NextImage from "next/image";
 
 export const parameters = {
