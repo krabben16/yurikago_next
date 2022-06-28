@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import React from 'react'
 
-import { Content } from './Content'
+import Content from '@/components/post/content'
 
 export default {
   title: 'Prod/Content',

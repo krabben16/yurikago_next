@@ -1,20 +1,20 @@
 const path = require('path')
 
 module.exports = {
-  "stories": [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+  stories: [
+    '../stories/**/*.stories.mdx',
+    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-webpack5"
+  framework: '@storybook/react',
+  core: {
+    builder: '@storybook/builder-webpack5',
   },
-  staticDirs: ["../public"],
+  staticDirs: ['../public'],
   webpackFinal: async (config) => {
     return {
       ...config,
@@ -22,9 +22,9 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          "@/types": path.resolve(__dirname, "../types"),
+          '@': path.resolve(__dirname, '..'),
         },
       },
-    };
+    }
   },
 }
