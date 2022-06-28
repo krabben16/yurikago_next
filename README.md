@@ -1,5 +1,3 @@
-⚠️ 2022/06 から[Zenn](https://zenn.dev/krabben16)に移行しました。
-
 # develop
 
 ```
