@@ -30,19 +30,19 @@ jobs:
         if: ${{ steps.cache_nextjs_dependency_id.outputs.cache-hit != 'true' }}
         run: rm -rf node_modules && yarn install --frozen-lockfile
 
-      - name: Build Test 🪜
+      - name: Build Test 🛠
         run: |
           yarn build
           yarn sitemap
 
-      - name: Install jq
+      - name: Install jq 📦
         run: yarn add global jq
 
       # クライアントIDとS3バケット名を環境変数から読み込んでJSONに設定する
-      - name: Set reg-suit config
+      - name: Set reg-suit config 📝
         run: |
-          cat regconfig.json | jq '.plugins."reg-notify-github-plugin".clientId|="${{ secrets.REG_SUIT_CLIENT_ID }}"' > regconfig.json
-          cat regconfig.json | jq '.plugins."reg-publish-s3-plugin".bucketName|="${{ secrets.REG_SUIT_S3_BUCKET_NAME }}"' > regconfig.json
+          cat regconfig.json | jq ".plugins."reg-notify-github-plugin".clientId|=\"${{ secrets.REG_SUIT_CLIENT_ID }}\"" > regconfig.json
+          cat regconfig.json | jq ".plugins."reg-publish-s3-plugin".bucketName|=\"${{ secrets.REG_SUIT_S3_BUCKET_NAME }}\"" > regconfig.json
 
       - name: Visual Regression Test 🖼
         run: |
