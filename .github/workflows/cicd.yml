@@ -35,12 +35,6 @@ jobs:
           yarn build
           yarn sitemap
 
-      # クライアントIDとS3バケット名を環境変数から読み込んでJSONに設定する
-      - name: Set reg-suit config 📝
-        run: |
-          sed -e 's/"clientId": ""/"clientId": "${{ secrets.REG_SUIT_CLIENT_ID }}"/' regconfig.json > regconfig.json
-          sed -e 's/"bucketName": ""/"bucketName": "${{ secrets.REG_SUIT_S3_BUCKET_NAME }}"/' regconfig.json > regconfig.json
-
       - name: Visual Regression Test 🖼
         run: |
           yarn storycap
