@@ -44,6 +44,12 @@ jobs:
           cat regconfig.json | jq '.plugins."reg-notify-github-plugin".clientId|="${{ secrets.REG_SUIT_CLIENT_ID }}"' > regconfig.json
           cat regconfig.json | jq '.plugins."reg-publish-s3-plugin".bucketName|="${{ secrets.REG_SUIT_S3_BUCKET_NAME }}"' > regconfig.json
 
+      # 現在のブランチ名を明示的にアタッチする
+      # https://github.com/reg-viz/reg-suit#run-with-ci-service
+      - name: Checkout HEAD
+        run: |
+          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+
       - name: Visual Regression Test 🖼
         run: |
           yarn storycap
