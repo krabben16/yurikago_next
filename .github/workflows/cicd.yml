@@ -4,6 +4,10 @@
 on:
   push:
 
+env:
+  REG_SUIT_CLIENT_ID: ${{ secrets.REG_SUIT_CLIENT_ID }}
+  REG_SUIT_S3_BUCKET_NAME: ${{ secrets.REG_SUIT_S3_BUCKET_NAME }}
+
 jobs:
   integration:
     runs-on: ubuntu-latest
