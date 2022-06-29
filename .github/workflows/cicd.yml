@@ -7,6 +7,8 @@ on:
 env:
   REG_SUIT_CLIENT_ID: ${{ secrets.REG_SUIT_CLIENT_ID }}
   REG_SUIT_S3_BUCKET_NAME: ${{ secrets.REG_SUIT_S3_BUCKET_NAME }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
 jobs:
   integration:
