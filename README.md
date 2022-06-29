@@ -6,6 +6,15 @@ yarn install
 yarn dev
 ```
 
+# VRT
+
+```
+yarn storycap
+yarn regression
+```
+
+※ S3 バケットに書き込みできる AWS アカウントのクレデンシャルを読み込む必要がある
+
 # dependency
 
 **dashboard**
