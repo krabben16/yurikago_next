@@ -36,8 +36,7 @@ jobs:
           yarn sitemap
 
       - name: Install jq
-        run: |
-          yarn add global jq
+        run: yarn add global jq
 
       # クライアントIDとS3バケット名を環境変数から読み込んでJSONに設定する
       - name: Set reg-suit config
