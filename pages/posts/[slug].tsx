@@ -24,7 +24,7 @@ const PostPage = ({ post }: Props) => {
 
   const breadcrumbs: Breadcrumb[] = [
     { name: 'トップページ', path: '/' },
-    { name: post.title, path: `/posts/${post.slug}` },
+    { name: post.title || '', path: `/posts/${post.slug}` },
   ]
 
   return (
