@@ -53,7 +53,7 @@ jobs:
       - name: Visual Regression Test 🖼
         run: |
           yarn storycap
-          yarn regression
+          yarn regression -v
 
   deploy:
     runs-on: ubuntu-latest
