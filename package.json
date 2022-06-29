@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "storycap": "storycap --serverCmd 'yarn storybook' http://localhost:6006 --serverTimeout 600000",
+    "storycap": "storycap --serverCmd 'yarn storybook' http://localhost:6006 --serverTimeout 600000 --delay 1000",
     "regression": "reg-suit run"
   },
   "dependencies": {
