@@ -41,6 +41,11 @@ jobs:
           yarn build
           yarn sitemap
 
+      # https://www.pnkts.net/2021/10/14/chromium-chromedriver-japanese
+      - name: Install Japanese fonts
+        run: |
+          sudo apt install fonts-ipafont fonts-ipaexfont
+
       - name: Visual Regression Test 🖼
         run: |
           yarn storycap
