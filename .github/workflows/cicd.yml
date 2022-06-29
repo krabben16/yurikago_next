@@ -4,6 +4,12 @@
 on:
   push:
 
+env:
+  REG_SUIT_CLIENT_ID: ${{ secrets.REG_SUIT_CLIENT_ID }}
+  REG_SUIT_S3_BUCKET_NAME: ${{ secrets.REG_SUIT_S3_BUCKET_NAME }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
 jobs:
   integration:
     runs-on: ubuntu-latest
@@ -30,11 +36,15 @@ jobs:
         if: ${{ steps.cache_nextjs_dependency_id.outputs.cache-hit != 'true' }}
         run: rm -rf node_modules && yarn install --frozen-lockfile
 
-      - name: Test Next.js 👮🏻‍♂️
+      - name: Build Test 🛠
         run: |
           yarn build
           yarn sitemap
-          
+
+      - name: Visual Regression Test 🖼
+        run: |
+          yarn storycap
+          yarn regression -v
 
   deploy:
     runs-on: ubuntu-latest
