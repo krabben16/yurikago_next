@@ -4,7 +4,7 @@ import React from 'react'
 import Content from '@/components/post/content'
 
 export default {
-  title: 'Prod/Content',
+  title: 'Blog/Content',
   component: Content,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
