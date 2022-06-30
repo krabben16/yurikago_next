@@ -10,9 +10,9 @@
     "lint:eslint": "eslint --ignore-path .gitignore .",
     "lint:prettier": "prettier --ignore-path .gitignore .",
     "prepare": "husky install",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 9001",
     "build-storybook": "build-storybook",
-    "storycap": "storycap --serverCmd 'yarn storybook' http://localhost:6006 --serverTimeout 600000 --delay 1000",
+    "storycap": "storycap --serverCmd 'yarn storybook' http://localhost:9001 --serverTimeout 600000 --delay 1000",
     "regression": "reg-suit run"
   },
   "dependencies": {
