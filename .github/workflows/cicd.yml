@@ -19,6 +19,8 @@ jobs:
 
       - name: Checkout 🛎
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Copy env file 📝
         run: cp .env.dist .env.local
@@ -40,6 +42,16 @@ jobs:
         run: |
           yarn build
           yarn sitemap
+
+      # https://www.pnkts.net/2021/10/14/chromium-chromedriver-japanese
+      - name: Install Japanese fonts
+        run: |
+          sudo apt install fonts-ipafont fonts-ipaexfont
+
+      # https://github.com/reg-viz/reg-suit#workaround-for-detached-head
+      - name: Workaround for detached HEAD
+        run: |
+          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
 
       - name: Visual Regression Test 🖼
         run: |

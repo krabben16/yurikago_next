@@ -15,6 +15,13 @@ yarn regression
 
 ※ S3 バケットに書き込みできる AWS アカウントのクレデンシャルを読み込む必要がある
 
+## 「ベースコミットに対応するスクリーンショットが S3 上に存在しない場合
+※ この方法はベースコミット = develop ブランチの HEAD である場合のみ有効
+
+1. クライアント ID と S3 バケット名を regconfig.json に設定
+2. git checkout develop
+3. yarn storycap && yarn regression
+
 # dependency
 
 **dashboard**
